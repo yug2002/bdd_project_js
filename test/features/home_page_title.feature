@@ -2,6 +2,11 @@
 Feature: Home Page Title
 
 Scenario: page title
-  Given I open epam.com
+  Given I open "https://www.epam.com/" url
   Then Page title should be "EPAM | Enterprise Software Development, Design & Consulting"
-  When I wait 10 seconds
+  When I wait "3" seconds
+
+Scenario: page title
+  Given I open "https://bash.im/" url
+  Then Page title should be "Цитатник Рунета"
+  When I wait "3" seconds
