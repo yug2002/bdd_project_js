@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor ./test/config/protractor_config.js",
+    "postinstall": "webdriver-manager update"
   },
   "keywords": [
     "BDD"
@@ -14,8 +15,10 @@
   "dependencies": {
     "chai": "^4.2.0",
     "cucumber": "^6.0.5",
+    "cucumber-pretty": "^6.0.0",
     "protractor": "^7.0.0",
-    "protractor-cucumber-framework": "^6.2.1"
+    "protractor-cucumber-framework": "^6.2.1",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "eslint": "^7.2.0"
