@@ -1,0 +1,82 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Home Page Title",
+    "line": 2,
+    "id": "home-page-title",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "test\\features\\home_page_title.feature",
+    "elements": [
+      {
+        "id": "home-page-title;page-title",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "page title",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open epam.com",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2631000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Page title should be \"EPAM | Enterprise Software Development, Design & Consulting\"",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I wait 10 seconds",
+            "match": {
+              "location": "test\\step_definitions\\browser_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10003000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
