@@ -1,14 +1,19 @@
-const { element } = require("protractor");
+const { element, browser } = require("protractor");
+const expectedConditions = browser.ExpectedConditions;
+
 
 class Element {
   constructor(selector) {
     this.element = element(by.css(selector));
   };
   click() {
+
     return this.element.click();
   };
-  getText() {
-    return this.element.getText();
+  async getText() {
+    
+    let text = await this.element.getText();
+    return text;
   };
 }
 

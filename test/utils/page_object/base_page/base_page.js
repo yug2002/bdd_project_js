@@ -1,8 +1,9 @@
 const Header = require('./header');
-const { browser } = require('protractor');
+//const { browser } = require('protractor');
 const expectedConditions = browser.ExpectedConditions;
 
-class BasePage{
+
+class BasePage {
   constructor(){
     this.Header = new Header();
   }
@@ -16,7 +17,7 @@ class BasePage{
     return browser.wait(isClickable, waitMilliseconds);
   }
 
-  waitForVisibility(element, waitMilliseconds){
+  waitForVisibility(element, waitMilliseconds) {
     let isDisplayed = expectedConditions.visibilityOf(element);
     return browser.wait(isDisplayed, waitMilliseconds);
   }
@@ -25,7 +26,7 @@ class BasePage{
     return browser.getTitle();
   }
 
-  getCurrentUrl(){
+  getCurrentUrl() {
     return browser.getCurrentUrl();
   }
 

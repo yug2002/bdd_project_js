@@ -1,17 +1,17 @@
-const { element } = require("protractor");
 
 class Collection {
   constructor(selector) {
     this.collection = element.all(by.css(selector));
   };
-  getCount() {
-    return this.collection.count();
+  async getCount() {
+    return await this.collection.count();
   };
-  getTexts() {
-    return this.collection.getText();
+  async getTexts() {
+    let text = await this.collection.getText()
+    return text;
   };
   async clickElementByText(textToClick) {
-    const arrayOfElementTexts = await this.collection.getTexts();
+    const arrayOfElementTexts = await this.collection.getText();
     const indexOfElementToClick = arrayOfElementTexts.indexOf(textToClick);
     if (indexOfElementToClick === -1) {
       throw new Error(`No element with [${textToClick}] text found`);
