@@ -17,13 +17,13 @@ class BasePage {
     return browser.wait(isClickable, waitMilliseconds);
   }
 
-  waitForVisibility(element, waitMilliseconds) {
-    let isDisplayed = expectedConditions.visibilityOf(element);
-    return browser.wait(isDisplayed, waitMilliseconds);
+  async waitForVisibility(element, waitMilliseconds) {
+    let isDisplayed = await expectedConditions.visibilityOf(element);
+    return await browser.wait(isDisplayed, waitMilliseconds);
   }
 
-  getTitle() {
-    return browser.getTitle();
+  async getTitle() {
+    return await browser.getTitle();
   }
 
   getCurrentUrl() {

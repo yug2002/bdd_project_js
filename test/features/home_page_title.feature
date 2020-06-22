@@ -4,14 +4,14 @@ Feature: Home Page Title
 @epam
 Scenario: page title
   Given I open "https://www.epam.com/" url
-  Then Page title should be "EPAM | Enterprise Software Development, Design & Consulting"
+  Then Page title should be "Engineering the Future"
     And Page title should not be "EPAM | Enterprise Software Development, Design & Consultingtttt"
   When I wait "3" seconds
 
-Scenario: page title
-  Given I open "https://bash.im/" url
-  Then Page title should be "Цитатник Рунета"
-  When I wait "3" seconds
+# Scenario: page title
+#   Given I open "https://bash.im/" url
+#   Then Page title should be "Цитатник Рунета"
+#   When I wait "3" seconds
 
 @so
 Scenario Outline: Page titles <URL>
@@ -20,6 +20,6 @@ Scenario Outline: Page titles <URL>
   When I wait "3" seconds
 
 Examples:
-| URL                   | Title                                                        |
-| https://bash.im/      | Цитатник Рунета                                              |
-| https://www.epam.com/ | EPAM \| Enterprise Software Development, Design & Consulting |
+| URL                   | Title                  |
+# | https://bash.im/      | Цитатник Рунета        |
+| https://www.epam.com/ | Engineering the Future |
