@@ -6,7 +6,6 @@ class OurWorkPage extends BasePage {
     super();
     this.title = new Element('h1.title-ui');    
   };
-  
 }
 
 module.exports = OurWorkPage;

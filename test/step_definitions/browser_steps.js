@@ -10,7 +10,7 @@ When(/^I open "([^"]*)" url$/, async function(url){
 
 Then(/^Page title should (not )?be "([^"]*)"$/, async function(notArg, title) {   
     const page = await PageFactory.getPage();
-  const pageTitle = await page.title();  
+  const pageTitle = await page.title.getText();  
   if(notArg){
     expect(pageTitle).to.not.be.equal(title);
   }else{

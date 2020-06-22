@@ -1,7 +1,5 @@
 const Header = require('./header');
-//const { browser } = require('protractor');
 const expectedConditions = browser.ExpectedConditions;
-
 
 class BasePage {
   constructor(){
