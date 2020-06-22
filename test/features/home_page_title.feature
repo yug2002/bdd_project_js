@@ -8,11 +8,6 @@ Scenario: page title
     And Page title should not be "EPAM | Enterprise Software Development, Design & Consultingtttt"
   When I wait "3" seconds
 
-# Scenario: page title
-#   Given I open "https://bash.im/" url
-#   Then Page title should be "Цитатник Рунета"
-#   When I wait "3" seconds
-
 @so
 Scenario Outline: Page titles <URL>
   Given I open "<URL>" url
@@ -21,5 +16,4 @@ Scenario Outline: Page titles <URL>
 
 Examples:
 | URL                   | Title                  |
-# | https://bash.im/      | Цитатник Рунета        |
 | https://www.epam.com/ | Engineering the Future |

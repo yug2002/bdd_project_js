@@ -1,3 +1,4 @@
+@smoke
 Feature: Our Work Title
 @work
 Scenario: page title
